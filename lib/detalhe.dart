@@ -101,7 +101,7 @@ class _DetalheState extends State<Detalhe> {
                 SizedBox(height: 25),
                 ElevatedButton(
                   child: Text(
-                    "Editar detalhe",
+                    "Editar detalhes do Incidente",
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                   onPressed: () {
