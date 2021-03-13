@@ -13,10 +13,6 @@ class Detalhe extends StatefulWidget {
 }
 
 class _DetalheState extends State<Detalhe> {
-  String _titulo;
-  String _descricao;
-  String _morada;
-  DateTime _data;
 
   Incidentes gestorIncidentes = Incidentes.getInstance();
   IncidentesDone incidentesDone = IncidentesDone.getInstance();
