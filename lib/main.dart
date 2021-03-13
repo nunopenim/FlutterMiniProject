@@ -58,6 +58,7 @@ class _AppScreenState extends State<AppScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     if (!demomakerhasran) {
       demoMaker();
     }
@@ -260,7 +261,7 @@ class _AppScreenState extends State<AppScreen> {
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat, //não gosto dele nos lados, espero não ser penalizado por isso...
     );
   }
 }
