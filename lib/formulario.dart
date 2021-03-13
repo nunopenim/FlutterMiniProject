@@ -80,7 +80,7 @@ class _PaginaFormState extends State<PaginaForm> {
                       return 'É obrigatória uma descrição';
                     }
                     if (value.length < 100) {
-                      return 'São necessários pelo menos 100 caractéres na descrição';
+                      return 'São necessários pelo menos 100 caractéres';
                     }
                     return null;
                   },
