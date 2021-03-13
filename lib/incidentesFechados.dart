@@ -23,7 +23,11 @@ class _IncidentesFechadosState extends State<IncidentesFechados> {
           incidente_done_manager.dispose();
           gestorIncidentes.dispose();
           gestorIncidentes.reload();
-          Navigator.pushReplacement(context, new MaterialPageRoute(builder: (context) => AppScreen(title: "Gestor de Incidentes")));
+          Navigator.pushReplacement(
+              context,
+              new MaterialPageRoute(
+                  builder: (context) =>
+                      AppScreen(title: "Gestor de Incidentes")));
         },
         child: Scaffold(
           key: _scaffoldKey,
@@ -38,24 +42,24 @@ class _IncidentesFechadosState extends State<IncidentesFechados> {
                 itemBuilder: (context, index) {
                   final incidente = snapshot.data[index];
                   return ListTile(
-                    title: Text(incidente.titulo + "\n" + incidente.data.toString().split(".")[0]),
-                    trailing: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          IconButton(
-                              icon: Icon(Icons.remove_red_eye),
-                              onPressed: () {
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            Detalhe(incidente: incidente)));
-                              }),
-                        ]),
+                    title: Text(incidente.titulo +
+                        "\n" +
+                        incidente.data.toString().split(".")[0]),
+                    trailing:
+                        Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
+                      IconButton(
+                          icon: Icon(Icons.remove_red_eye),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        Detalhe(incidente: incidente)));
+                          }),
+                    ]),
                   );
                 }),
           ),
-        )
-    );
+        ));
   }
 }

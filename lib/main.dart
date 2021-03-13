@@ -182,7 +182,10 @@ class _AppScreenState extends State<AppScreen> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: <Widget>[
                                     IconButton(
-                                        icon: Icon(Icons.restore_from_trash_outlined, size: 35.0,),
+                                        icon: Icon(
+                                          Icons.restore_from_trash_outlined,
+                                          size: 35.0,
+                                        ),
                                         onPressed: () {
                                           setState(() {
                                             snapshot.data.removeAt(index);
@@ -193,32 +196,42 @@ class _AppScreenState extends State<AppScreen> {
                                           });
                                         }),
                                   ]),
-                        leading: Row(mainAxisSize: MainAxisSize.min,children: <
-                            Widget>[
-                          incidente.estaResolvido()
-                              ? IconButton(
-                                  icon: Icon(Icons.check, color: Colors.green, size: 35.0,),
-                                  onPressed: () {
-                                    incidentesDone.updateListDone(incidente);
-                                    setState(() {
-                                      snapshot.data.removeAt(index);
-                                    });
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                        SnackBar(
-                                            content: Text(
-                                                "O seu incidente foi dado como fechado.")));
-                                    return true;
-                                  })
-                              : IconButton(
-                              icon: Icon(Icons.clear, color: Colors.red, size: 35.0,),
-                              onPressed: () {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                        content: Text(
-                                            "Este incidente ainda não se encontra resolvido, por isso não pode transitar para a lista dos fechados.")));
-                                return false;
-                              })
-                        ]),
+                        leading: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: <Widget>[
+                              incidente.estaResolvido()
+                                  ? IconButton(
+                                      icon: Icon(
+                                        Icons.check,
+                                        color: Colors.green,
+                                        size: 35.0,
+                                      ),
+                                      onPressed: () {
+                                        incidentesDone
+                                            .updateListDone(incidente);
+                                        setState(() {
+                                          snapshot.data.removeAt(index);
+                                        });
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(SnackBar(
+                                                content: Text(
+                                                    "O seu incidente foi dado como fechado.")));
+                                        return true;
+                                      })
+                                  : IconButton(
+                                      icon: Icon(
+                                        Icons.clear,
+                                        color: Colors.red,
+                                        size: 35.0,
+                                      ),
+                                      onPressed: () {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(SnackBar(
+                                                content: Text(
+                                                    "Este incidente ainda não se encontra resolvido, por isso não pode transitar para a lista dos fechados.")));
+                                        return false;
+                                      })
+                            ]),
                       ),
                     ),
                     decoration:

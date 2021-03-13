@@ -28,5 +28,4 @@ class Incidente {
   DateTime getData() {
     return data;
   }
-
 }

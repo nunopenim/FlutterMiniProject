@@ -33,8 +33,11 @@ class _PaginaFormState extends State<PaginaForm> {
               children: <Widget>[
                 TextFormField(
                   initialValue:
-                  widget.incidente == null ? '' : widget.incidente.titulo,
-                  decoration: InputDecoration(labelText: 'Título', hintText: 'Título', border: OutlineInputBorder()),
+                      widget.incidente == null ? '' : widget.incidente.titulo,
+                  decoration: InputDecoration(
+                      labelText: 'Título',
+                      hintText: 'Título',
+                      border: OutlineInputBorder()),
                   maxLength: 25,
                   validator: (String value) {
                     if (value.isEmpty) {
@@ -48,9 +51,11 @@ class _PaginaFormState extends State<PaginaForm> {
                 ),
                 SizedBox(height: 25),
                 TextFormField(
-                  initialValue:
-                  widget.incidente == null ? '' : widget.incidente.descricao,
-                  decoration: InputDecoration(labelText: 'Descrição',
+                  initialValue: widget.incidente == null
+                      ? ''
+                      : widget.incidente.descricao,
+                  decoration: InputDecoration(
+                      labelText: 'Descrição',
                       hintText: 'Descrição',
                       border: const OutlineInputBorder()),
                   maxLength: 200,
@@ -70,9 +75,11 @@ class _PaginaFormState extends State<PaginaForm> {
                 SizedBox(height: 25),
                 TextFormField(
                   initialValue:
-                  widget.incidente == null ? '' : widget.incidente.morada,
+                      widget.incidente == null ? '' : widget.incidente.morada,
                   decoration: InputDecoration(
-                      labelText: 'Morada', hintText: 'Morada', border: OutlineInputBorder()),
+                      labelText: 'Morada',
+                      hintText: 'Morada',
+                      border: OutlineInputBorder()),
                   maxLength: 60,
                   validator: (String value) {
                     return null;
@@ -91,16 +98,15 @@ class _PaginaFormState extends State<PaginaForm> {
                   onPressed: () {
                     if (widget.incidente == null) {
                       _data = DateTime.now();
-                    }
-                    else {
+                    } else {
                       _data = widget.incidente.data;
                     }
                     if (!_formKey.currentState.validate()) {
                       return;
                     }
                     _formKey.currentState.save();
-                    Navigator.of(context).pop(
-                        Incidente(_titulo, _descricao, _morada, _data));
+                    Navigator.of(context)
+                        .pop(Incidente(_titulo, _descricao, _morada, _data));
                   },
                 )
               ],
@@ -110,6 +116,4 @@ class _PaginaFormState extends State<PaginaForm> {
       ),
     );
   }
-
 }
-
