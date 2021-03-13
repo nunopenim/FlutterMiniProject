@@ -40,6 +40,13 @@ class _AppScreenState extends State<AppScreen> {
         "",
         DateTime.now());
     gestorIncidentes.addIncidente(i1);
+    Incidente i3 = Incidente(
+        "Queda de Árvore",
+        "Queda de árvore após uma tempestade. A localização encontra-se isolada do tráfego pedonal para a segurança de todos",
+        "Jardim do Sol, Avenida Principal",
+        DateTime.now());
+    i3.resolver();
+    gestorIncidentes.addIncidente(i3);
     Incidente i2 = Incidente(
         "Esgoto",
         "Esgoto entupido na casa do Sr. José, causa possivel é má construção do edificio. Cano possivelmente furado",
@@ -123,7 +130,7 @@ class _AppScreenState extends State<AppScreen> {
             ),
             Container(
               child: ListTile(
-                title: Text('[DEBUG] Run the Demo Maker'),
+                title: Text('[DEBUG] Gerar exemplos'),
                 leading: Icon(Icons.bug_report_outlined),
                 onTap: () {
                   demoMaker();
