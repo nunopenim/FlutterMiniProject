@@ -6,8 +6,8 @@ Realizado por Nuno Penim - 21700874
 
 ## Video do youtube
 
-[To-Do]
+[https://youtu.be/QnqyVUdqvvQ](https://youtu.be/QnqyVUdqvvQ)
 
 ## Autoavaliação
 
-[To-Do]
+Creio que devo ter 14-15 neste projeto. Devem existir alguns bugs não detectados da minha parte, e algumas más práticas, tanto a nivel de código, como visual.
