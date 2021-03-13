@@ -258,7 +258,7 @@ class _AppScreenState extends State<AppScreen> {
                 content: Text("O seu incidente foi submetido com sucesso.")));
           });
         },
-        tooltip: 'Increment',
+        tooltip: 'Adicionar novo incidente',
         child: Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat, //não gosto dele nos lados, espero não ser penalizado por isso...

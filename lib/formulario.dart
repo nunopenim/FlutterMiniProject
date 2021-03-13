@@ -41,7 +41,7 @@ class _PaginaFormState extends State<PaginaForm> {
                   maxLength: 25,
                   validator: (String value) {
                     if (value.isEmpty) {
-                      return 'Título is Required';
+                      return 'É necessário um título para o incidente';
                     }
                     return null;
                   },
@@ -77,10 +77,10 @@ class _PaginaFormState extends State<PaginaForm> {
                   maxLength: 200,
                   validator: (String value) {
                     if (value.isEmpty) {
-                      return 'Descrição is Required';
+                      return 'É obrigatória uma descrição';
                     }
                     if (value.length < 100) {
-                      return 'Descrição at least 100 characters';
+                      return 'São necessários pelo menos 100 caractéres na descrição';
                     }
                     return null;
                   },
