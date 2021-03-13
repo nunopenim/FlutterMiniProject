@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'blocs/incidente.dart';
 import 'formulario.dart';
 import 'blocs/incidenteManager.dart';
@@ -39,20 +40,10 @@ class _DetalheState extends State<Detalhe> {
                             hintText: 'Título',
                             border: OutlineInputBorder()),
                         maxLength: 25,
+                        minLines: 3,
                         maxLines: 3,
-                        readOnly: true,
-                      ),
-                      SizedBox(height: 25),
-                      TextFormField(
-                        initialValue: widget.incidente == null
-                            ? ''
-                            : widget.incidente.descricao,
-                        decoration: InputDecoration(
-                            labelText: 'Descrição',
-                            hintText: 'Descrição',
-                            border: const OutlineInputBorder()),
-                        maxLength: 200,
-                        maxLines: 3,
+                        textAlign: TextAlign.justify,
+                        textAlignVertical: TextAlignVertical.center,
                         readOnly: true,
                       ),
                       SizedBox(height: 25),
@@ -65,7 +56,42 @@ class _DetalheState extends State<Detalhe> {
                             hintText: 'Morada',
                             border: OutlineInputBorder()),
                         maxLength: 60,
+                        minLines: 3,
                         maxLines: 3,
+                        textAlign: TextAlign.justify,
+                        textAlignVertical: TextAlignVertical.center,
+                        readOnly: true,
+                      ),
+                      SizedBox(height: 25),
+                      TextFormField(
+                        initialValue: widget.incidente == null
+                            ? ''
+                            : widget.incidente.data.toString().split(".")[0],
+                        decoration: InputDecoration(
+                            labelText: 'Data do incidente',
+                            hintText: 'Data do incidente',
+                            border: const OutlineInputBorder()),
+                        maxLength: 200,
+                        minLines: 3,
+                        maxLines: 3,
+                        textAlign: TextAlign.justify,
+                        textAlignVertical: TextAlignVertical.center,
+                        readOnly: true,
+                      ),
+                      SizedBox(height: 25),
+                      TextFormField(
+                        initialValue: widget.incidente == null
+                            ? ''
+                            : widget.incidente.descricao,
+                        decoration: InputDecoration(
+                            labelText: 'Descrição',
+                            hintText: 'Descrição',
+                            border: const OutlineInputBorder()),
+                        maxLength: 200,
+                        minLines: 3,
+                        maxLines: 3,
+                        textAlign: TextAlign.justify,
+                        textAlignVertical: TextAlignVertical.center,
                         readOnly: true,
                       ),
                       SizedBox(height: 25),
@@ -83,7 +109,42 @@ class _DetalheState extends State<Detalhe> {
                             hintText: 'Título',
                             border: OutlineInputBorder()),
                         maxLength: 25,
+                        minLines: 3,
                         maxLines: 3,
+                        textAlign: TextAlign.justify,
+                        textAlignVertical: TextAlignVertical.center,
+                        readOnly: true,
+                      ),
+                      SizedBox(height: 25),
+                      TextFormField(
+                        initialValue: widget.incidente == null
+                            ? ''
+                            : widget.incidente.data.toString().split(".")[0],
+                        decoration: InputDecoration(
+                            labelText: 'Data do incidente',
+                            hintText: 'Data do incidente',
+                            border: const OutlineInputBorder()),
+                        maxLength: 200,
+                        minLines: 3,
+                        maxLines: 3,
+                        textAlign: TextAlign.justify,
+                        textAlignVertical: TextAlignVertical.center,
+                        readOnly: true,
+                      ),
+                      SizedBox(height: 25),
+                      TextFormField(
+                        initialValue: widget.incidente == null
+                            ? ''
+                            : widget.incidente.morada,
+                        decoration: InputDecoration(
+                            labelText: 'Morada',
+                            hintText: 'Morada',
+                            border: OutlineInputBorder()),
+                        maxLength: 60,
+                        minLines: 3,
+                        maxLines: 3,
+                        textAlign: TextAlign.justify,
+                        textAlignVertical: TextAlignVertical.center,
                         readOnly: true,
                       ),
                       SizedBox(height: 25),
@@ -97,19 +158,9 @@ class _DetalheState extends State<Detalhe> {
                             border: const OutlineInputBorder()),
                         maxLength: 200,
                         maxLines: 3,
-                        readOnly: true,
-                      ),
-                      SizedBox(height: 25),
-                      TextFormField(
-                        initialValue: widget.incidente == null
-                            ? ''
-                            : widget.incidente.morada,
-                        decoration: InputDecoration(
-                            labelText: 'Morada',
-                            hintText: 'Morada',
-                            border: OutlineInputBorder()),
-                        maxLength: 60,
-                        maxLines: 3,
+                        minLines: 3,
+                        textAlign: TextAlign.justify,
+                        textAlignVertical: TextAlignVertical.center,
                         readOnly: true,
                       ),
                       SizedBox(height: 25),

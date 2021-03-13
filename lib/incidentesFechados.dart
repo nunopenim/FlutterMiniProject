@@ -41,23 +41,24 @@ class _IncidentesFechadosState extends State<IncidentesFechados> {
                 itemCount: snapshot.data.length,
                 itemBuilder: (context, index) {
                   final incidente = snapshot.data[index];
-                  return ListTile(
-                    title: Text(incidente.titulo +
-                        "\n" +
-                        incidente.data.toString().split(".")[0]),
-                    trailing:
-                        Row(mainAxisSize: MainAxisSize.min, children: <Widget>[
-                      IconButton(
-                          icon: Icon(Icons.remove_red_eye),
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        Detalhe(incidente: incidente)));
-                          }),
-                    ]),
-                  );
+                  return Container(
+                    child: Center(
+                      child: ListTile(
+                        title: Text(
+                            incidente.titulo +
+                                "\n" +
+                                incidente.data.toString().split(".")[0],
+                            textScaleFactor: 1),
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      Detalhe(incidente: incidente)));
+                        }
+                      )
+                    ), decoration:
+                  BoxDecoration(border: Border.all(color: Colors.grey)), height: 60.0);
                 }),
           ),
         ));

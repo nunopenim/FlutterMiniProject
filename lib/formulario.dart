@@ -51,6 +51,22 @@ class _PaginaFormState extends State<PaginaForm> {
                 ),
                 SizedBox(height: 25),
                 TextFormField(
+                  initialValue:
+                      widget.incidente == null ? '' : widget.incidente.morada,
+                  decoration: InputDecoration(
+                      labelText: 'Morada',
+                      hintText: 'Morada',
+                      border: OutlineInputBorder()),
+                  maxLength: 60,
+                  validator: (String value) {
+                    return null;
+                  },
+                  onSaved: (String value) {
+                    _morada = value;
+                  },
+                ),
+                SizedBox(height: 25),
+                TextFormField(
                   initialValue: widget.incidente == null
                       ? ''
                       : widget.incidente.descricao,
@@ -70,22 +86,6 @@ class _PaginaFormState extends State<PaginaForm> {
                   },
                   onSaved: (String value) {
                     _descricao = value;
-                  },
-                ),
-                SizedBox(height: 25),
-                TextFormField(
-                  initialValue:
-                      widget.incidente == null ? '' : widget.incidente.morada,
-                  decoration: InputDecoration(
-                      labelText: 'Morada',
-                      hintText: 'Morada',
-                      border: OutlineInputBorder()),
-                  maxLength: 60,
-                  validator: (String value) {
-                    return null;
-                  },
-                  onSaved: (String value) {
-                    _morada = value;
                   },
                 ),
                 SizedBox(height: 25),
