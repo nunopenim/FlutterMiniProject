@@ -67,14 +67,14 @@ class _AppScreenState extends State<AppScreen> {
         title: Text(widget.title),
       ),
       drawer: Drawer(
-        //hopefully um menu hamburger, se bem me lembro de IHM
+        //hopefully um menu hamburger bom, se bem me lembro dos componentes de IHM
         child: ListView(
           padding: EdgeInsets.zero,
           children: <Widget>[
             Container(
-              height: 90.0,
+              height: 89.0, //este tamanho permite ter ao quadrado superior o mesmo tamanho da barra superior da aplicação, num ecra 1080x2220
               child: DrawerHeader(
-                child: Text('AppIncidentes da iQueChumbei'),
+                child: Text('AppIncidentes da iQueChumbei', textScaleFactor: 1.38), //também relacionado com o quadrado superior
                 decoration: BoxDecoration(
                   color: Colors.blue,
                 ),
